@@ -1,5 +1,5 @@
 {
-  "name": "joke-bachground",
+  "name": "joke-background",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/pro-components": "^2.6.2",
+    "antd": "^5.6.2",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
     "next": "13.4.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "umi-request": "^1.4.0"
   }
 }

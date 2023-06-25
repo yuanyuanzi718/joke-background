@@ -1,10 +1,11 @@
 "use client";
 import { UserOutlined } from "@ant-design/icons";
 import { Layout, Menu, theme, Avatar, Dropdown } from "antd";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import styles from "./index.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 const { Header, Sider, Content } = Layout;
 const items = [
   {

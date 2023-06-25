@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Metadata } from "next";
 import { AlipayOutlined, LockOutlined, MobileOutlined, TaobaoOutlined, UserOutlined, WeiboOutlined } from "@ant-design/icons";
 import { LoginFormPage, ProFormCaptcha, ProFormCheckbox, ProFormText } from "@ant-design/pro-components";
 import { Button, Divider, message, Space, Tabs } from "antd";
-
+import { ThemeContext } from "@/context/ThemeContext";
+import { useRouter } from "next/navigation";
 const iconStyles = {
   color: "rgba(0, 0, 0, 0.2)",
   fontSize: "18px",
@@ -13,7 +14,9 @@ const iconStyles = {
 };
 
 const LoginPage = () => {
+  const router = useRouter();
   const [loginType, setLoginType] = useState("phone");
+  const { toggle, mode } = useContext(ThemeContext);
   return (
     <div
       style={{
@@ -208,6 +211,15 @@ const LoginPage = () => {
           >
             忘记密码
           </a>
+          {mode}
+          <button
+            onClick={() => {
+              toggle();
+              router.push("/");
+            }}
+          >
+            dian
+          </button>
         </div>
       </LoginFormPage>
     </div>

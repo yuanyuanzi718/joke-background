@@ -33,7 +33,14 @@ const Index = (props) => {
     <Layout className={styles.layout}>
       <Sider className={styles.sider}>
         <Link href="/">
-          <div className={styles.logo}>joke工作台</div>
+          <div
+            onClick={() => {
+              setCurrent(null);
+            }}
+            className={styles.logo}
+          >
+            joke工作台
+          </div>
         </Link>
         <Menu
           theme="dark"
